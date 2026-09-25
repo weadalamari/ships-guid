@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتبة البحر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="build.html">بناء قارب</a>
+  <a href="weather.html">الطقس والمد</a>
+  <a href="books.html" class="active">الكتب</a>
+  <a href="websites.html">المواقع</a>
+  <a href="youtube.html">يوتيوب</a>
+  <a href="glossary.html">المصطلحات</a>
+</nav>
+
+<div class="banner">
+  <svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgBooks" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#dbe9f7"/>
+        <stop offset="100%" stop-color="#b3d0ea"/>
+      </linearGradient>
+    </defs>
+    <rect width="900" height="200" fill="url(#bgBooks)"/>
+    <rect x="60" y="160" width="780" height="14" fill="#8b6f4a"/>
+    <rect x="60" y="174" width="780" height="6" fill="#5a3e1f"/>
+    <g>
+      <rect x="100" y="80" width="26" height="80" fill="#c94a4a" rx="2"/>
+      <line x1="105" y1="90" x2="121" y2="90" stroke="#f5e0b8" stroke-width="1"/>
+      <line x1="105" y1="100" x2="121" y2="100" stroke="#f5e0b8" stroke-width="1"/>
+      <rect x="130" y="70" width="30" height="90" fill="#4d6f9a" rx="2"/>
+      <line x1="135" y1="80" x2="155" y2="80" stroke="#cfe2f5" stroke-width="1"/>
+      <circle cx="145" cy="110" r="8" fill="none" stroke="#cfe2f5" stroke-width="1"/>
+      <rect x="164" y="90" width="22" height="70" fill="#7a5630" rx="2"/>
+      <line x1="169" y1="100" x2="181" y2="100" stroke="#e8dcc0" stroke-width="1"/>
+      <g transform="rotate(-12 200 160)">
+        <rect x="190" y="85" width="24" height="75" fill="#5c7a99" rx="2"/>
+        <line x1="195" y1="95" x2="209" y2="95" stroke="#cfe2f5" stroke-width="1"/>
+      </g>
+      <rect x="220" y="75" width="28" height="85" fill="#3d6b5e" rx="2"/>
+      <line x1="225" y1="85" x2="243" y2="85" stroke="#e8dcc0" stroke-width="1"/>
+      <g transform="translate(320, 130)">
+        <path d="M-35 20 L35 20 L25 32 L-25 32 Z" fill="#8b6f4a"/>
+        <line x1="0" y1="20" x2="0" y2="-15" stroke="#5a3e1f" stroke-width="2"/>
+        <path d="M2 -13 L2 18 L28 18 Z" fill="#f5f0e0" stroke="#a89a7a" stroke-width="0.6"/>
+        <path d="M-2 -13 L-2 18 L-24 18 Z" fill="#f5f0e0" stroke="#a89a7a" stroke-width="0.6"/>
+      </g>
+      <rect x="380" y="70" width="30" height="90" fill="#c98a9e" rx="2"/>
+      <line x1="385" y1="80" x2="405" y2="80" stroke="#fff" stroke-width="1"/>
+      <rect x="414" y="85" width="24" height="75" fill="#8b6f4a" rx="2"/>
+      <line x1="419" y1="95" x2="433" y2="95" stroke="#f5e0b8" stroke-width="1"/>
+      <rect x="442" y="78" width="28" height="82" fill="#4d6f9a" rx="2"/>
+      <line x1="447" y1="88" x2="465" y2="88" stroke="#cfe2f5" stroke-width="1"/>
+      <rect x="474" y="92" width="22" height="68" fill="#a87a4a" rx="2"/>
+      <g transform="translate(560, 120)" stroke="#3a6288" stroke-width="2" fill="none" stroke-linecap="round">
+        <circle cx="0" cy="-18" r="4"/>
+        <line x1="0" y1="-14" x2="0" y2="20"/>
+        <line x1="-10" y1="0" x2="10" y2="0"/>
+        <path d="M-14 8c0 8 6 12 14 12s14-4 14-12"/>
+      </g>
+      <rect x="620" y="72" width="30" height="88" fill="#5c7a99" rx="2"/>
+      <line x1="625" y1="82" x2="645" y2="82" stroke="#cfe2f5" stroke-width="1"/>
+      <line x1="625" y1="92" x2="645" y2="92" stroke="#cfe2f5" stroke-width="1"/>
+      <rect x="654" y="85" width="24" height="75" fill="#c94a4a" rx="2"/>
+      <rect x="682" y="78" width="28" height="82" fill="#3d6b5e" rx="2"/>
+      <circle cx="696" cy="115" r="6" fill="none" stroke="#e8dcc0" stroke-width="1"/>
+      <rect x="714" y="90" width="22" height="70" fill="#7a5630" rx="2"/>
+      <rect x="740" y="75" width="26" height="85" fill="#4d6f9a" rx="2"/>
+      <line x1="745" y1="85" x2="761" y2="85" stroke="#cfe2f5" stroke-width="1"/>
+      <rect x="770" y="82" width="24" height="78" fill="#c98a9e" rx="2"/>
+    </g>
+  </svg>
+</div>
+
+<header>
+  <h1 data-i18n="bk_h1">مكتبة البحر</h1>
+  <p class="subtitle" data-i18n="bk_subtitle">مجموعة مختارة من كتب البناء والملاحة والقصص البحرية</p>
+</header>
+
+<div class="container">
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">How to Build a Boat</div>
+      <div class="card-title-ar" data-i18n-show="ar">كيف تبني قاربًا</div>
+      <div class="card-author">Elaine Feeney</div>
+      <div class="book-type" data-i18n="bk1_type">نوع الكتاب: رواية</div>
+      <div class="card-desc"><span data-i18n="bk1_d">رواية مؤثرة عن صبي يبلغ 13 عامًا يحلم ببناء قارب، وتتحول رحلته إلى درس في الأمل والانتماء. وصلت للقائمة القصيرة لجائزة بوكر 2023.</span><br>
+        <a href="https://www.penguin.co.uk/books/448213/how-to-build-a-boat-by-feeney-elaine/9781529920093" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">Sailing Alone: A History</div>
+      <div class="card-title-ar" data-i18n-show="ar">الإبحار وحيدًا: تاريخ</div>
+      <div class="card-author">Richard J. King</div>
+      <div class="book-type" data-i18n="bk2_type">نوع الكتاب: تاريخ</div>
+      <div class="card-desc"><span data-i18n="bk2_d">تاريخ شامل للإبحار الفردي حول العالم، من الأيام الأولى إلى الرحلات الحديثة. رُشّح لجائزة المؤسسة البحرية لأفضل كتاب 2024.</span><br>
+        <a href="https://www.penguin.co.uk/books/448213/sailing-alone-by-king-richard-j/9781802063097" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">How to Build an Aircraft Carrier</div>
+      <div class="card-title-ar" data-i18n-show="ar">كيف تبني حاملة طائرات</div>
+      <div class="card-author">Chris Terrill</div>
+      <div class="book-type" data-i18n="bk3_type">نوع الكتاب: هندسة بحرية</div>
+      <div class="card-desc"><span data-i18n="bk3_d">القصة المذهلة لبناء السفينة الحربية HMS Queen Elizabeth، وكيف بنى آلاف العمال واحدة من أعظم السفن في التاريخ.</span><br>
+        <a href="https://www.penguin.co.uk/books/448213/how-to-build-an-aircraft-carrier-by-terrill-chris/9781405942522" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">Wooden Boats: In Pursuit of the Perfect Craft</div>
+      <div class="card-title-ar" data-i18n-show="ar">القوارب الخشبية: بحثًا عن الحرفة المثالية</div>
+      <div class="card-author">Michael Ruhlman</div>
+      <div class="book-type" data-i18n="bk4_type">نوع الكتاب: بناء القوارب</div>
+      <div class="card-desc"><span data-i18n="bk4_d">رحلة داخل ورشة بناء قوارب شهيرة في مارثا فينيارد، لبناء قارب شراعي من الصفر. كتاب كلاسيكي عن الحرفة والصبر.</span><br>
+        <a href="https://www.penguinrandomhouse.com/books/29734/wooden-boats-by-michael-ruhlman/" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">The Brendan Voyage</div>
+      <div class="card-title-ar" data-i18n-show="ar">رحلة بريندان</div>
+      <div class="card-author">Tim Severin</div>
+      <div class="book-type" data-i18n="bk5_type">نوع الكتاب: مغامرة</div>
+      <div class="card-desc"><span data-i18n="bk5_d">مغامرة حقيقية: بناء قارب جلدي تقليدي وإبحاره عبر المحيط الأطلسي، لإثبات إمكانية رحلة القديس بريندان الأسطورية.</span><br>
+        <a href="https://www.penguinrandomhouse.com/books/164422/the-brendan-voyage-by-tim-severin/9780375755248/" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-box"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+      <div class="card-title" data-i18n-show="en,zh">A Marriage at Sea</div>
+      <div class="card-title-ar" data-i18n-show="ar">زواج في البحر</div>
+      <div class="card-author">Sophie Elmhirst</div>
+      <div class="book-type" data-i18n="bk6_type">نوع الكتاب: قصة حقيقية</div>
+      <div class="card-desc"><span data-i18n="bk6_d">القصة الحقيقية لزوجين قررا بيع منزلهما وبناء قارب والإبحار إلى نيوزيلندا، لكن حوتًا يصطدم بقاربهما في منتصف المحيط الهادئ.</span><br>
+        <a href="https://www.penguinrandomhouse.ca/books/771662/a-marriage-at-sea-by-sophie-elmhirst/9780593854280" target="_blank" data-i18n="bk_penguin">عرض على Penguin ←</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  دليل البحر والقوارب
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="21"/><line x1="7" y1="12" x2="17" y2="12"/><path d="M4 15c0 4.5 3.5 6.5 8 6.5s8-2 8-6.5"/></svg>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

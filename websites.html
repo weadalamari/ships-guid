@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مواقع تعليمية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .site-card { background:rgba(255,255,255,0.7); border:1px solid rgba(160,190,220,0.5); border-radius:16px; padding:20px; backdrop-filter:blur(6px); box-shadow:0 3px 14px rgba(80,120,170,0.07); transition:transform .3s,box-shadow .3s,border-color .3s; position:relative; overflow:hidden; text-decoration:none; display:block; }
+  .site-card::before { content:""; position:absolute; top:0; right:0; width:4px; height:100%; background:linear-gradient(180deg,#6f95bd,#b0cce6); opacity:0; transition:opacity .3s; }
+  .site-card:hover { transform:translateY(-5px); box-shadow:0 14px 32px rgba(80,120,170,0.18); border-color:#6f95bd; }
+  .site-card:hover::before { opacity:1; }
+  .site-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+  .site-logo { width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#e3effa,#b8d0e8); border:1px solid rgba(140,180,215,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform .3s; }
+  .site-card:hover .site-logo { transform:scale(1.08) rotate(-3deg); }
+  .site-logo svg { width:26px; height:26px; stroke:#3a6288; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+  .site-name { font-family:'Cormorant Garamond',serif; font-style:italic; color:#1e4a78; font-size:1.15rem; font-weight:700; direction:ltr; text-align:left; line-height:1.3; }
+  .site-country { font-family:'Aref Ruqaa',serif; color:#5c87b5; font-size:0.82rem; margin-top:2px; }
+  .site-desc { color:#3a5a7d; font-size:0.9rem; line-height:1.85; margin-bottom:12px; }
+  .site-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .tag { font-family:'Aref Ruqaa',serif; font-size:0.72rem; color:#3a6288; background:rgba(176,204,230,0.5); border:1px solid rgba(140,180,215,0.3); padding:3px 10px; border-radius:10px; }
+  .tag.free { background:rgba(140,200,170,0.35); color:#2f6b50; border-color:rgba(120,180,150,0.4); }
+  .tag.paid { background:rgba(220,180,200,0.35); color:#7a3a55; border-color:rgba(200,150,180,0.4); }
+  .site-link { font-family:'Aref Ruqaa',serif; color:#3a6288; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:6px; transition:gap .3s; border-bottom:1px dotted #6f95bd; }
+  .site-card:hover .site-link { gap:12px; border-bottom-style:solid; }
+  .sites-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:16px; }
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:25px 0 30px; }
+  .stat-box { background:rgba(255,255,255,0.65); border:1px solid rgba(160,190,220,0.5); border-radius:14px; padding:16px; text-align:center; backdrop-filter:blur(6px); }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:700; color:#1e4a78; font-size:1.9rem; line-height:1; margin-bottom:4px; }
+  .stat-label { font-family:'Aref Ruqaa',serif; color:#5c87b5; font-size:0.85rem; }
+  @media (max-width:600px) { .sites-grid { grid-template-columns:1fr; } .stats { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="build.html">بناء قارب</a>
+  <a href="weather.html">الطقس والمد</a>
+  <a href="books.html">الكتب</a>
+  <a href="websites.html" class="active">المواقع</a>
+  <a href="youtube.html">يوتيوب</a>
+  <a href="glossary.html">المصطلحات</a>
+</nav>
+
+<div class="banner">
+  <svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="bgWeb" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e3effa"/>
+        <stop offset="50%" stop-color="#c5dcf0"/>
+        <stop offset="100%" stop-color="#a3c3e0"/>
+      </linearGradient>
+      <radialGradient id="globe" cx="38%" cy="32%">
+        <stop offset="0%" stop-color="#dbe9f7"/>
+        <stop offset="55%" stop-color="#7a9bc4"/>
+        <stop offset="100%" stop-color="#2a4d73"/>
+      </radialGradient>
+      <radialGradient id="globeGlow" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#cfe2f5" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#cfe2f5" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="900" height="240" fill="url(#bgWeb)"/>
+    <circle cx="450" cy="120" r="160" fill="url(#globeGlow)"/>
+    <g transform="translate(450, 120)">
+      <ellipse cx="8" cy="8" rx="86" ry="86" fill="#2a4d73" opacity="0.15"/>
+      <circle r="82" fill="url(#globe)"/>
+      <g stroke="#cfe2f5" stroke-width="0.7" fill="none" opacity="0.55">
+        <ellipse rx="82" ry="26"/>
+        <ellipse rx="82" ry="52"/>
+        <ellipse rx="26" ry="82"/>
+        <ellipse rx="52" ry="82"/>
+        <line x1="-82" y1="0" x2="82" y2="0"/>
+      </g>
+      <g fill="#3d6b5e" opacity="0.82">
+        <path d="M-52 -55 Q-35 -68 -15 -62 Q-5 -52 -18 -38 Q-32 -28 -50 -35 Q-62 -46 -52 -55 Z"/>
+        <path d="M-28 -5 Q-15 -15 -5 0 Q-8 20 -20 32 Q-30 28 -28 10 Q-32 2 -28 -5 Z"/>
+        <path d="M5 -55 Q20 -62 35 -55 Q38 -45 28 -40 Q12 -42 5 -50 Z"/>
+        <path d="M5 -30 Q28 -35 38 -18 Q35 15 20 30 Q5 25 2 5 Q-2 -18 5 -30 Z"/>
+        <path d="M35 -55 Q55 -65 72 -55 Q78 -40 70 -22 Q55 -18 42 -30 Q32 -42 35 -55 Z"/>
+        <path d="M45 30 Q62 24 72 35 Q70 50 55 52 Q42 45 45 30 Z"/>
+      </g>
+      <ellipse cx="-25" cy="-30" rx="40" ry="22" fill="#fff" opacity="0.12"/>
+      <circle r="82" fill="none" stroke="#5c87b5" stroke-width="1.2" opacity="0.6"/>
+    </g>
+    <g stroke="#6f95bd" stroke-width="1.2" fill="none" opacity="0.65" stroke-dasharray="5,4">
+      <path d="M130 80 Q280 30 400 100"/>
+      <path d="M130 80 Q280 180 400 140"/>
+      <path d="M770 80 Q620 30 500 100"/>
+      <path d="M770 80 Q620 180 500 140"/>
+      <path d="M180 200 Q310 220 430 170"/>
+      <path d="M720 200 Q590 220 470 170"/>
+    </g>
+    <g>
+      <circle cx="130" cy="80" r="9" fill="#cfe2f5" opacity="0.5"/>
+      <circle cx="130" cy="80" r="5" fill="#3a6288"/>
+      <circle cx="130" cy="80" r="2" fill="#fff"/>
+      <circle cx="770" cy="80" r="9" fill="#cfe2f5" opacity="0.5"/>
+      <circle cx="770" cy="80" r="5" fill="#3a6288"/>
+      <circle cx="770" cy="80" r="2" fill="#fff"/>
+      <circle cx="180" cy="200" r="9" fill="#cfe2f5" opacity="0.5"/>
+      <circle cx="180" cy="200" r="5" fill="#3a6288"/>
+      <circle cx="180" cy="200" r="2" fill="#fff"/>
+      <circle cx="720" cy="200" r="9" fill="#cfe2f5" opacity="0.5"/>
+      <circle cx="720" cy="200" r="5" fill="#3a6288"/>
+      <circle cx="720" cy="200" r="2" fill="#fff"/>
+    </g>
+    <g transform="translate(280, 58) scale(0.55)">
+      <path d="M-18 0 L18 0 L12 8 L-12 8 Z" fill="#8b6f4a"/>
+      <line x1="0" y1="0" x2="0" y2="-16" stroke="#5a3e1f" stroke-width="1.5"/>
+      <path d="M1 -15 L1 -2 L12 -2 Z" fill="#f5f0e0"/>
+    </g>
+    <g transform="translate(620, 58) scale(0.55)">
+      <path d="M-18 0 L18 0 L12 8 L-12 8 Z" fill="#8b6f4a"/>
+      <line x1="0" y1="0" x2="0" y2="-16" stroke="#5a3e1f" stroke-width="1.5"/>
+      <path d="M1 -15 L1 -2 L12 -2 Z" fill="#f5f0e0"/>
+    </g>
+  </svg>
+</div>
+
+<header>
+  <h1 data-i18n="ws_h1">مواقع تعليمية عن بناء القوارب</h1>
+  <p class="subtitle" data-i18n="ws_subtitle">أفضل المنصات العالمية الموثوقة</p>
+</header>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-num">6</div>
+      <div class="stat-label" data-i18n="ws_stat1">مواقع مختارة</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3</div>
+      <div class="stat-label" data-i18n="ws_stat2">مصادر مجانية</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">50+</div>
+      <div class="stat-label" data-i18n="ws_stat3">سنة خبرة مجمّعة</div>
+    </div>
+  </div>
+
+  <h2 data-i18n="ws_h2">المواقع الموصى بها</h2>
+
+  <div class="sites-grid">
+
+    <a href="https://www.woodenboat.com" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><path d="M3 18h18l-2.5 3.5h-13z"/><line x1="12" y1="2.5" x2="12" y2="18"/><path d="M12 3.5L4 16h8z"/><path d="M13 6.5l6.5 9.5H13z"/></svg></div>
+        <div>
+          <div class="site-name">WoodenBoat Magazine</div>
+          <div class="site-country" data-i18n="ws1_c">الولايات المتحدة</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws1_d">مجلة ومنصة تعليمية متخصصة في القوارب الخشبية. تقدم دورات، مخططات، مقالات، وأرشيف فيديو ضخم.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws1_g1">مجلة</span>
+        <span class="tag" data-i18n="ws1_g2">دورات</span>
+        <span class="tag free" data-i18n="ws1_g3">محتوى مجاني + مدفوع</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+    <a href="https://www.clcboats.com" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><path d="M3 18h18l-2.5 3.5h-13z"/><line x1="12" y1="2.5" x2="12" y2="18"/><path d="M12 3.5L4 16h8z"/><path d="M13 6.5l6.5 9.5H13z"/></svg></div>
+        <div>
+          <div class="site-name">Chesapeake Light Craft</div>
+          <div class="site-country" data-i18n="ws2_c">الولايات المتحدة</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws2_d">شركة تبيع مخططات قوارب جاهزة وقطع مفصّلة CNC، مع أدلة بناء مجانية مفصّلة على موقعهم.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws2_g1">مخططات</span>
+        <span class="tag" data-i18n="ws2_g2">قطع CNC</span>
+        <span class="tag free" data-i18n="ws2_g3">أدلة مجانية</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+    <a href="https://www.offcenterharbor.com" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="#3a6288" stroke="none"/></svg></div>
+        <div>
+          <div class="site-name">Off Center Harbor</div>
+          <div class="site-country" data-i18n="ws3_c">الولايات المتحدة</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws3_d">مكتبة فيديو تعليمية ضخمة لبناء القوارب والصيانة البحرية. أكثر من 1000 فيديو من خبراء عالميين.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws3_g1">فيديو</span>
+        <span class="tag" data-i18n="ws3_g2">صيانة</span>
+        <span class="tag paid" data-i18n="ws3_g3">اشتراك مدفوع</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+    <a href="https://www.woodenboatschool.com" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="13" width="6" height="7"/></svg></div>
+        <div>
+          <div class="site-name">The WoodenBoat School</div>
+          <div class="site-country" data-i18n="ws4_c">الولايات المتحدة (مين)</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws4_d">مدرسة متخصصة في دورات بناء القوارب الحضورية. دورات صيفية أسبوعية للمبتدئين والمتقدمين.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws4_g1">دورات حضورية</span>
+        <span class="tag" data-i18n="ws4_g2">صيفية</span>
+        <span class="tag paid" data-i18n="ws4_g3">برسوم</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+    <a href="https://www.boatdesign.net" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16,8 14,14 8,16 10,10" fill="#3a6288" stroke="none"/></svg></div>
+        <div>
+          <div class="site-name">Boat Design Net</div>
+          <div class="site-country" data-i18n="ws5_c">عالمي</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws5_d">أكبر منتدى عالمي لمصممي القوارب. تشارك فيه مخططات وتصاميم مجانية ونقاشات احترافية.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws5_g1">منتدى</span>
+        <span class="tag" data-i18n="ws5_g2">تصاميم</span>
+        <span class="tag free" data-i18n="ws5_g3">مجاني</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+    <a href="https://www.instructables.com" target="_blank" class="site-card">
+      <div class="site-header">
+        <div class="site-logo"><svg viewBox="0 0 24 24"><path d="M3 14h18l-2 5H5z"/><path d="M6 14V9c0-3 3-5 6-5s6 2 6 5v5"/></svg></div>
+        <div>
+          <div class="site-name">Instructables – Boat Building</div>
+          <div class="site-country" data-i18n="ws6_c">عالمي</div>
+        </div>
+      </div>
+      <div class="site-desc" data-i18n="ws6_d">مشاريع بناء قوارب بسيطة خطوة بخطوة، مع صور وشرح مفصّل. مثالية للمبتدئين وأصحاب الميزانية المحدودة.</div>
+      <div class="site-tags">
+        <span class="tag" data-i18n="ws6_g1">مشاريع</span>
+        <span class="tag" data-i18n="ws6_g2">مبتدئين</span>
+        <span class="tag free" data-i18n="ws6_g3">مجاني</span>
+      </div>
+      <span class="site-link" data-i18n="ws_visit">زيارة الموقع ←</span>
+    </a>
+
+  </div>
+
+</div>
+
+<footer>
+  دليل البحر والقوارب
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="21"/><line x1="7" y1="12" x2="17" y2="12"/><path d="M4 15c0 4.5 3.5 6.5 8 6.5s8-2 8-6.5"/></svg>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

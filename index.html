@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل البحر والقوارب — الرئيسية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero { max-width:900px; margin:0 auto 0; border-radius:20px 20px 0 0; overflow:hidden; box-shadow:0 12px 45px rgba(60,100,150,0.28); position:relative; }
+  .hero svg { width:100%; height:auto; display:block; }
+  .hero-caption { max-width:900px; margin:0 auto; background:linear-gradient(180deg,rgba(20,45,80,0.85),rgba(15,35,65,0.95)); padding:28px 40px 34px; border-radius:0 0 20px 20px; box-shadow:0 12px 45px rgba(60,100,150,0.28); }
+  .hero-caption h2 { font-family:'Aref Ruqaa',serif; font-size:2rem; color:#fff; margin:0 0 8px; border:none; padding:0; font-weight:700; text-shadow:0 2px 14px rgba(0,0,0,0.4); }
+  .hero-caption p { font-family:'Aref Ruqaa',serif; color:rgba(255,255,255,0.88); font-size:1rem; line-height:1.9; max-width:640px; margin-bottom:18px; }
+  .hero-buttons { display:flex; gap:12px; flex-wrap:wrap; }
+  .hero-btn { display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:26px; text-decoration:none; font-family:'Aref Ruqaa',serif; font-size:0.95rem; font-weight:700; transition:transform .3s,box-shadow .3s,background .3s; }
+  .hero-btn.primary { background:linear-gradient(135deg,#cfe2f5,#9abede); color:#1e3d60; box-shadow:0 6px 20px rgba(160,200,235,0.3); }
+  .hero-btn.primary:hover { transform:translateY(-3px); box-shadow:0 10px 28px rgba(160,200,235,0.5); }
+  .hero-btn.secondary { background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(200,220,240,0.5); }
+  .hero-btn.secondary:hover { background:rgba(255,255,255,0.22); transform:translateY(-3px); }
+  .hero-btn svg { width:18px; height:18px; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+  .welcome { max-width:900px; margin:40px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; padding:0 10px; }
+  .welcome-text h3 { font-family:'Aref Ruqaa',serif; font-size:1.6rem; color:#1e4a78; margin-bottom:14px; font-weight:700; line-height:1.5; }
+  .welcome-text p { color:#3a5a7d; font-size:1rem; line-height:2; margin-bottom:12px; }
+  .welcome-art { background:rgba(255,255,255,0.6); border:1px solid rgba(160,190,220,0.5); border-radius:18px; padding:22px; backdrop-filter:blur(8px); box-shadow:0 6px 24px rgba(80,120,170,0.1); }
+  .welcome-art svg { width:100%; height:auto; display:block; }
+  .section-heading { max-width:900px; margin:55px auto 20px; padding:0 10px; text-align:center; }
+  .section-heading h3 { font-family:'Aref Ruqaa',serif; font-size:1.7rem; color:#1e4a78; font-weight:700; margin-bottom:6px; display:inline-block; padding-bottom:10px; border-bottom:2px solid #a1bdd8; }
+  .section-heading p { color:#5c87b5; font-size:0.95rem; font-family:'Cormorant Garamond',serif; font-style:italic; margin-top:8px; }
+  .main-grid { max-width:900px; margin:0 auto; padding:0 10px; display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px; }
+  .main-card { background:rgba(255,255,255,0.72); border:1px solid rgba(160,190,220,0.5); border-radius:18px; padding:22px; text-decoration:none; display:block; transition:transform .35s,box-shadow .35s,border-color .35s; position:relative; overflow:hidden; backdrop-filter:blur(6px); }
+  .main-card::before { content:""; position:absolute; top:0; right:0; width:5px; height:100%; background:linear-gradient(180deg,#6f95bd,#b0cce6); opacity:0; transition:opacity .35s; }
+  .main-card:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(80,120,170,0.2); border-color:#6f95bd; }
+  .main-card:hover::before { opacity:1; }
+  .main-icon { width:60px; height:60px; border-radius:16px; background:linear-gradient(135deg,#e3effa,#b8d0e8); border:1px solid rgba(140,180,215,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:transform .35s; }
+  .main-card:hover .main-icon { transform:scale(1.1) rotate(-3deg); }
+  .main-icon svg { width:34px; height:34px; stroke:#3a6288; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+  .main-card h4 { font-family:'Aref Ruqaa',serif; color:#1e4a78; font-size:1.15rem; font-weight:700; margin-bottom:8px; }
+  .main-card p { color:#4a6a8c; font-size:0.9rem; line-height:1.85; margin-bottom:12px; }
+  .main-link { font-family:'Aref Ruqaa',serif; color:#3a6288; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:6px; transition:gap .35s; }
+  .main-card:hover .main-link { gap:14px; }
+  .facts-grid { max-width:900px; margin:0 auto; padding:0 10px; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
+  .fact-card { background:rgba(255,255,255,0.6); border:1px solid rgba(160,190,220,0.5); border-radius:16px; padding:22px 18px; text-align:center; backdrop-filter:blur(6px); transition:transform .3s,box-shadow .3s; }
+  .fact-card:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(80,120,170,0.15); }
+  .fact-icon { width:50px; height:50px; border-radius:14px; background:linear-gradient(135deg,#e3effa,#b8d0e8); display:inline-flex; align-items:center; justify-content:center; margin-bottom:12px; }
+  .fact-icon svg { width:26px; height:26px; stroke:#3a6288; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+  .fact-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:700; color:#1e4a78; font-size:2rem; line-height:1; margin-bottom:6px; }
+  .fact-label { font-family:'Aref Ruqaa',serif; color:#5c87b5; font-size:0.85rem; line-height:1.6; }
+  .quote { max-width:900px; margin:55px auto 0; background:rgba(255,255,255,0.55); border-radius:20px; border-right:5px solid #6f95bd; backdrop-filter:blur(8px); padding:0 10px; }
+  .quote-inner { padding:30px 40px 30px 30px; }
+  .quote-text { font-family:'Aref Ruqaa',serif; font-size:1.2rem; color:#1e4a78; line-height:2; margin-bottom:12px; font-style:italic; }
+  .quote-author { font-family:'Cormorant Garamond',serif; font-style:italic; color:#5c87b5; font-size:0.95rem; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes float-slow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+  @keyframes wave-slide { from{transform:translateX(0)} to{transform:translateX(-80px)} }
+  @keyframes wave-slide-r { from{transform:translateX(0)} to{transform:translateX(80px)} }
+  @keyframes sun-glow { 0%,100%{opacity:.85} 50%{opacity:1} }
+  @keyframes bird-fly { 0%{transform:translate(0,0)} 50%{transform:translate(40px,-14px)} 100%{transform:translate(0,0)} }
+  @keyframes twinkle { 0%,100%{opacity:.3} 50%{opacity:1} }
+  @keyframes lighthouse-beam { 0%,100%{opacity:.15} 50%{opacity:.7} }
+  .boat-float { animation:float 4s ease-in-out infinite; transform-origin:center; }
+  .boat-float-slow { animation:float-slow 5s ease-in-out infinite; }
+  .wave-1 { animation:wave-slide 9s linear infinite; }
+  .wave-2 { animation:wave-slide-r 12s linear infinite; }
+  .wave-3 { animation:wave-slide 15s linear infinite; }
+  .sun-glow { animation:sun-glow 5s ease-in-out infinite; }
+  .bird { animation:bird-fly 6s ease-in-out infinite; }
+  .bird-2 { animation:bird-fly 7.5s ease-in-out infinite 1s; }
+  .star { animation:twinkle 3s ease-in-out infinite; }
+  .star-2 { animation:twinkle 4s ease-in-out infinite .5s; }
+  .star-3 { animation:twinkle 3.5s ease-in-out infinite 1s; }
+  .light-beam { animation:lighthouse-beam 4s ease-in-out infinite; }
+  @media (max-width:700px) {
+    .welcome { grid-template-columns:1fr; }
+    .hero-caption { padding:22px 22px 28px; }
+    .hero-caption h2 { font-size:1.4rem; }
+    .hero-caption p { font-size:.9rem; }
+    .hero-btn { padding:10px 18px; font-size:.88rem; }
+    .section-heading h3 { font-size:1.35rem; }
+    .quote-inner { padding:22px 22px 22px 18px; }
+    .quote-text { font-size:1.05rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="active">الرئيسية</a>
+  <a href="build.html">بناء قارب</a>
+  <a href="weather.html">الطقس والمد</a>
+  <a href="books.html">الكتب</a>
+  <a href="websites.html">المواقع</a>
+  <a href="youtube.html">يوتيوب</a>
+  <a href="glossary.html">المصطلحات</a>
+</nav>
+
+<div class="hero">
+  <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1e3d60"/>
+        <stop offset="25%" stop-color="#3a5c82"/>
+        <stop offset="50%" stop-color="#7a9bc4"/>
+        <stop offset="70%" stop-color="#c98a9e"/>
+        <stop offset="85%" stop-color="#f0a878"/>
+        <stop offset="100%" stop-color="#ffd89a"/>
+      </linearGradient>
+      <radialGradient id="sunDisc" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#fff8e0"/>
+        <stop offset="50%" stop-color="#ffdf9a"/>
+        <stop offset="100%" stop-color="#ffc96a" stop-opacity="0.8"/>
+      </radialGradient>
+      <radialGradient id="sunGlow" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#fff4d0" stop-opacity="0.9"/>
+        <stop offset="40%" stop-color="#ffd89a" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#ffd89a" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7a9bc4"/>
+        <stop offset="30%" stop-color="#4d6f9a"/>
+        <stop offset="100%" stop-color="#0d2440"/>
+      </linearGradient>
+      <linearGradient id="mountains" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3a4d6b"/>
+        <stop offset="100%" stop-color="#1e3d60"/>
+      </linearGradient>
+    </defs>
+    <rect width="900" height="230" fill="url(#skyGrad)"/>
+    <g fill="#fff">
+      <circle class="star" cx="80" cy="30" r="1.2"/>
+      <circle class="star-2" cx="180" cy="55" r="1"/>
+      <circle class="star-3" cx="290" cy="25" r="1.3"/>
+      <circle class="star" cx="420" cy="45" r="1"/>
+      <circle class="star-2" cx="560" cy="20" r="1.2"/>
+      <circle class="star-3" cx="680" cy="50" r="1"/>
+      <circle class="star" cx="780" cy="30" r="1.3"/>
+      <circle class="star-2" cx="850" cy="60" r="1"/>
+      <circle class="star-3" cx="120" cy="70" r="0.9"/>
+      <circle class="star" cx="630" cy="75" r="1"/>
+    </g>
+    <circle class="sun-glow" cx="450" cy="215" r="150" fill="url(#sunGlow)"/>
+    <path d="M0 200 L60 165 L120 185 L180 155 L240 180 L300 160 L360 185 L420 170 L480 190 L540 165 L600 185 L660 160 L720 180 L780 165 L840 185 L900 170 L900 230 L0 230 Z" fill="url(#mountains)" opacity="0.7"/>
+    <circle cx="450" cy="205" r="42" fill="url(#sunDisc)"/>
+    <g fill="#fff" opacity="0.32">
+      <ellipse cx="180" cy="100" rx="70" ry="12"/>
+      <ellipse cx="230" cy="92" rx="48" ry="10"/>
+      <ellipse cx="140" cy="96" rx="38" ry="8"/>
+      <ellipse cx="720" cy="115" rx="65" ry="12"/>
+      <ellipse cx="770" cy="107" rx="45" ry="9"/>
+    </g>
+    <g stroke="#2a3d52" stroke-width="1.8" fill="none" class="bird">
+      <path d="M320 130 Q326 123 332 130 Q338 123 344 130"/>
+    </g>
+    <g stroke="#2a3d52" stroke-width="1.6" fill="none" class="bird-2">
+      <path d="M370 115 Q375 110 380 115 Q385 110 390 115"/>
+    </g>
+    <g stroke="#2a3d52" stroke-width="1.4" fill="none" class="bird">
+      <path d="M280 150 Q285 145 290 150 Q295 145 300 150"/>
+    </g>
+    <rect y="230" width="900" height="170" fill="url(#seaGrad)"/>
+    <g opacity="0.55">
+      <ellipse cx="450" cy="245" rx="85" ry="3" fill="#ffe0a8"/>
+      <ellipse cx="450" cy="260" rx="65" ry="2.5" fill="#ffd89a"/>
+      <ellipse cx="450" cy="278" rx="48" ry="2" fill="#ffd89a"/>
+      <ellipse cx="450" cy="298" rx="32" ry="1.8" fill="#ffd89a"/>
+      <ellipse cx="450" cy="320" rx="22" ry="1.5" fill="#ffd89a" opacity="0.8"/>
+    </g>
+    <g class="wave-3">
+      <path d="M-80 260 Q-40 250 0 260 T80 260 T160 260 T240 260 T320 260 T400 260 T480 260 T560 260 T640 260 T720 260 T800 260 T880 260 T960 260 L960 400 L-80 400 Z" fill="#3d5c82" opacity="0.5"/>
+    </g>
+    <g class="wave-2">
+      <path d="M-80 290 Q-40 280 0 290 T80 290 T160 290 T240 290 T320 290 T400 290 T480 290 T560 290 T640 290 T720 290 T800 290 T880 290 T960 290 L960 400 L-80 400 Z" fill="#2a4d73" opacity="0.7"/>
+    </g>
+    <g class="wave-1">
+      <path d="M-80 325 Q-40 315 0 325 T80 325 T160 325 T240 325 T320 325 T400 325 T480 325 T560 325 T640 325 T720 325 T800 325 T880 325 T960 325 L960 400 L-80 400 Z" fill="#1a3a5c" opacity="0.9"/>
+    </g>
+    <g class="boat-float" transform="translate(650, 275)">
+      <path d="M-38 20 L38 20 L28 36 L-28 36 Z" fill="#0d2440" opacity="0.4"/>
+      <path d="M-45 0 L45 0 L32 22 L-32 22 Z" fill="#5a3e1f"/>
+      <path d="M-45 0 L45 0 L38 8 L-38 8 Z" fill="#7a5630"/>
+      <line x1="-32" y1="22" x2="32" y2="22" stroke="#2a1c0c" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="0" y2="-70" stroke="#4a3018" stroke-width="3"/>
+      <path d="M3 -66 L3 -3 L44 -3 Z" fill="#f5f0e0" stroke="#c5b89a" stroke-width="0.8"/>
+      <line x1="3" y1="-40" x2="26" y2="-40" stroke="#c5b89a" stroke-width="0.5" opacity="0.7"/>
+      <line x1="3" y1="-22" x2="18" y2="-22" stroke="#c5b89a" stroke-width="0.5" opacity="0.7"/>
+      <path d="M-3 -66 L-3 -3 L-38 -3 Z" fill="#f5f0e0" stroke="#c5b89a" stroke-width="0.8"/>
+      <line x1="-3" y1="-40" x2="-22" y2="-40" stroke="#c5b89a" stroke-width="0.5" opacity="0.7"/>
+      <line x1="-3" y1="-22" x2="-15" y2="-22" stroke="#c5b89a" stroke-width="0.5" opacity="0.7"/>
+      <path d="M0 -70 L14 -65 L0 -60 Z" fill="#c94a4a"/>
+    </g>
+    <g class="boat-float-slow" transform="translate(180, 250) scale(0.55)">
+      <path d="M-30 0 L30 0 L22 14 L-22 14 Z" fill="#4a3018"/>
+      <line x1="0" y1="0" x2="0" y2="-45" stroke="#3a2010" stroke-width="2"/>
+      <path d="M2 -43 L2 -2 L28 -2 Z" fill="#e0d5b8" stroke="#a89a7a" stroke-width="0.6"/>
+      <path d="M-2 -43 L-2 -2 L-24 -2 Z" fill="#e0d5b8" stroke="#a89a7a" stroke-width="0.6"/>
+    </g>
+    <ellipse cx="180" cy="263" rx="22" ry="2" fill="#1e3d60" opacity="0.4"/>
+  </svg>
+</div>
+
+<div class="hero-caption">
+  <h2 data-i18n="idx_h1">دليل البحر والقوارب</h2>
+  <p data-i18n="idx_hero_p">رحلتك تبدأ هنا — كل ما تحتاجه لتعلم الإبحار وبناء القوارب: من المصطلحات البحرية إلى خطوات البناء، مرورًا بالطقس والمد والجزر وأفضل المصادر التعليمية.</p>
+  <div class="hero-buttons">
+    <a href="build.html" class="hero-btn primary">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18l-2.5 3.5h-13z"/><line x1="12" y1="2.5" x2="12" y2="18"/><path d="M12 3.5L4 16h8z"/><path d="M13 6.5l6.5 9.5H13z"/></svg>
+      <span data-i18n="idx_btn_build">ابدأ ببناء قارب</span>
+    </a>
+    <a href="glossary.html" class="hero-btn secondary">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16,8 14,14 8,16 10,10" fill="currentColor" stroke="none"/></svg>
+      <span data-i18n="idx_btn_gloss">تصفح المصطلحات</span>
+    </a>
+  </div>
+</div>
+
+<div class="welcome">
+  <div class="welcome-text">
+    <h3 data-i18n="idx_welcome_h3">مرحبًا بك في عالم البحر</h3>
+    <p data-i18n="idx_welcome_p1">هذا الدليل الشامل يجمع لك كل ما يحتاجه المبتدئ والمحترف في عالم القوارب والإبحار. سواء كنت تحلم ببناء قاربك الأول، أو تريد تعلم قراءة الطقس قبل الإبحار، أو تبحث عن أفضل المصادر التعليمية — كل شيء هنا.</p>
+    <p data-i18n="idx_welcome_p2">اختر القسم الذي يناسبك من القائمة العلوية أو من البطاقات أدناه، وابدأ رحلتك البحرية.</p>
+  </div>
+  <div class="welcome-art">
+    <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="waSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#dbe9f7"/>
+          <stop offset="100%" stop-color="#a8c8e8"/>
+        </linearGradient>
+        <linearGradient id="waSea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#5c87b5"/>
+          <stop offset="100%" stop-color="#2a4d73"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="170" fill="url(#waSky)"/>
+      <rect y="170" width="400" height="90" fill="url(#waSea)"/>
+      <circle cx="320" cy="60" r="22" fill="#ffdf9a" opacity="0.9"/>
+      <circle cx="320" cy="60" r="32" fill="#ffdf9a" opacity="0.2"/>
+      <g fill="#fff" opacity="0.7">
+        <ellipse cx="90" cy="50" rx="30" ry="9"/>
+        <ellipse cx="120" cy="45" rx="22" ry="7"/>
+      </g>
+      <path d="M0 150 L60 115 L110 140 L170 110 L230 145 L290 120 L350 145 L400 130 L400 170 L0 170 Z" fill="#7a8fb8" opacity="0.6"/>
+      <g stroke="#cfe2f5" stroke-width="1.5" fill="none" opacity="0.6">
+        <path d="M0 190 Q20 185 40 190 T80 190 T120 190 T160 190 T200 190 T240 190 T280 190 T320 190 T360 190 T400 190"/>
+        <path d="M0 215 Q20 210 40 215 T80 215 T120 215 T160 215 T200 215 T240 215 T280 215 T320 215 T360 215 T400 215"/>
+        <path d="M0 240 Q20 235 40 240 T80 240 T120 240 T160 240 T200 240 T240 240 T280 240 T320 240 T360 240 T400 240"/>
+      </g>
+      <g transform="translate(140, 155)">
+        <path d="M-40 0 L40 0 L30 18 L-30 18 Z" fill="#5a3e1f"/>
+        <line x1="0" y1="0" x2="0" y2="-50" stroke="#4a3018" stroke-width="2.5"/>
+        <path d="M2 -48 L2 -3 L32 -3 Z" fill="#f5f0e0" stroke="#c5b89a" stroke-width="0.7"/>
+        <path d="M-2 -48 L-2 -3 L-28 -3 Z" fill="#f5f0e0" stroke="#c5b89a" stroke-width="0.7"/>
+        <path d="M0 -50 L10 -46 L0 -42 Z" fill="#c94a4a"/>
+      </g>
+      <g transform="translate(340, 175)">
+        <path d="M-8 0 L8 0 L5 -40 L-5 -40 Z" fill="#e8dcc0" stroke="#8b6f4a" stroke-width="1"/>
+        <rect x="-6" y="-48" width="12" height="8" fill="#c94a4a"/>
+        <circle cx="0" cy="-44" r="2.5" fill="#ffd97a"/>
+        <path d="M0 -44 L30 -50 L30 -38 Z" fill="#ffd97a" opacity="0.5" class="light-beam"/>
+        <path d="M0 -44 L-30 -50 L-30 -38 Z" fill="#ffd97a" opacity="0.5" class="light-beam"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="section-heading">
+  <h3 data-i18n="idx_sec_h3">استكشف الأقسام</h3>
+  <p data-i18n="idx_sec_p">ستة أبواب لعالم البحر</p>
+</div>
+
+<div class="main-grid">
+  <a href="build.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><path d="M3 18h18l-2.5 3.5h-13z"/><line x1="12" y1="2.5" x2="12" y2="18"/><path d="M12 3.5L4 16h8z"/><path d="M13 6.5l6.5 9.5H13z"/></svg></div>
+    <h4 data-i18n="idx_c_build_h">كيف تبني قارب؟</h4>
+    <p data-i18n="idx_c_build_p">7 خطوات عملية من اختيار النوع والمواد حتى الاختبار المائي في البحر.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+  <a href="weather.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><path d="M2 9c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M2 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M2 19c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg></div>
+    <h4 data-i18n="idx_c_weather_h">الطقس والمد والجزر</h4>
+    <p data-i18n="idx_c_weather_p">لماذا السلامة تبدأ من قراءة الطقس قبل الإبحار، وكيف تقرأ المد.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+  <a href="books.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><path d="M2.5 5.5v14c3-1 6.5-1 9.5 0 3-1 6.5-1 9.5 0v-14c-3-1-6.5-1-9.5 0-3-1-6.5-1-9.5 0z"/><line x1="12" y1="5.5" x2="12" y2="19.5"/></svg></div>
+    <h4 data-i18n="idx_c_books_h">كتب موثوقة</h4>
+    <p data-i18n="idx_c_books_p">6 مراجع أساسية لبناء القوارب مع المؤلفين وروابط أمازون.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+  <a href="websites.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
+    <h4 data-i18n="idx_c_web_h">مواقع تعليمية</h4>
+    <p data-i18n="idx_c_web_p">أفضل 6 منصات عالمية لتعلم بناء القوارب والصيانة البحرية.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+  <a href="youtube.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="#3a6288" stroke="none"/></svg></div>
+    <h4 data-i18n="idx_c_yt_h">قنوات يوتيوب</h4>
+    <p data-i18n="idx_c_yt_p">قنوات حقيقية متخصصة تعرض مشاريع بناء قوارب من الصفر.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+  <a href="glossary.html" class="main-card">
+    <div class="main-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16,8 14,14 8,16 10,10" fill="#3a6288" stroke="none"/></svg></div>
+    <h4 data-i18n="idx_c_gloss_h">المصطلحات البحرية</h4>
+    <p data-i18n="idx_c_gloss_p">قاموس كامل بالعربي والإنجليزي مع بحث فوري داخل المصطلحات.</p>
+    <span class="main-link" data-i18n="idx_link">تصفح القسم ←</span>
+  </a>
+</div>
+
+<div class="section-heading">
+  <h3 data-i18n="idx_fact_h3">حقائق بحرية</h3>
+  <p data-i18n="idx_fact_p">أرقام تدهشك عن عالم البحار</p>
+</div>
+
+<div class="facts-grid">
+  <div class="fact-card">
+    <div class="fact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+    <div class="fact-num">12.5</div>
+    <div class="fact-label" data-i18n="idx_f1_label">ساعة بين كل مدّين — تقريبًا</div>
+  </div>
+  <div class="fact-card">
+    <div class="fact-icon"><svg viewBox="0 0 24 24"><path d="M2 9c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M2 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg></div>
+    <div class="fact-num">71%</div>
+    <div class="fact-label" data-i18n="idx_f2_label">من سطح الأرض مغطى بالمياه</div>
+  </div>
+  <div class="fact-card">
+    <div class="fact-icon"><svg viewBox="0 0 24 24"><path d="M3 18h18l-2.5 3.5h-13z"/><line x1="12" y1="2.5" x2="12" y2="18"/><path d="M12 3.5L4 16h8z"/></svg></div>
+    <div class="fact-num">2050</div>
+    <div class="fact-label" data-i18n="idx_f3_label">قبل الميلاد — أول سفينة شراعية</div>
+  </div>
+  <div class="fact-card">
+    <div class="fact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5 12h14M12 5v14"/></svg></div>
+    <div class="fact-num">11 km</div>
+    <div class="fact-label" data-i18n="idx_f4_label">أعمق نقطة في المحيطات (خندق ماريانا)</div>
+  </div>
+</div>
+
+<div class="quote">
+  <div class="quote-inner">
+    <div class="quote-text" data-i18n="idx_quote">«البحر هو المصدر الوحيد للأمل الحقيقي — إنه يعطي ولا يطلب، ويحمل من يجرؤ على ركوبه إلى عوالم لا توصف.»</div>
+    <div class="quote-author" data-i18n="idx_quote_author">— مقولة بحرية متوارثة</div>
+  </div>
+</div>
+
+<footer>
+  دليل البحر والقوارب
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="21"/><line x1="7" y1="12" x2="17" y2="12"/><path d="M4 15c0 4.5 3.5 6.5 8 6.5s8-2 8-6.5"/></svg>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

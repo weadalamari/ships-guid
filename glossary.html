@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المصطلحات البحرية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="build.html">بناء قارب</a>
+  <a href="weather.html">الطقس والمد</a>
+  <a href="books.html">الكتب</a>
+  <a href="websites.html">المواقع</a>
+  <a href="youtube.html">يوتيوب</a>
+  <a href="glossary.html" class="active">المصطلحات</a>
+</nav>
+
+<div class="banner">
+  <svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGlossary" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#dbe9f7"/>
+        <stop offset="100%" stop-color="#b3d0ea"/>
+      </linearGradient>
+      <radialGradient id="compassFace" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#f5f0e0"/>
+        <stop offset="100%" stop-color="#e0d5b8"/>
+      </radialGradient>
+    </defs>
+    <rect width="900" height="200" fill="url(#bgGlossary)"/>
+    <g transform="translate(450, 105)">
+      <circle r="85" fill="#5a3e1f" opacity="0.3"/>
+      <circle r="82" fill="#8b6f4a"/>
+      <circle r="78" fill="#a87a4a"/>
+      <circle r="72" fill="url(#compassFace)"/>
+      <g stroke="#5a3e1f" stroke-width="1.5">
+        <line x1="0" y1="-72" x2="0" y2="-65"/>
+        <line x1="0" y1="72" x2="0" y2="65"/>
+        <line x1="-72" y1="0" x2="-65" y2="0"/>
+        <line x1="72" y1="0" x2="65" y2="0"/>
+        <line x1="-51" y1="-51" x2="-46" y2="-46"/>
+        <line x1="51" y1="-51" x2="46" y2="-46"/>
+        <line x1="-51" y1="51" x2="-46" y2="46"/>
+        <line x1="51" y1="51" x2="46" y2="46"/>
+      </g>
+      <text x="0" y="-54" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#1e3d60">N</text>
+      <text x="0" y="64" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#c94a4a">S</text>
+      <text x="-60" y="5" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#1e3d60">W</text>
+      <text x="60" y="5" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#1e3d60">E</text>
+      <g transform="rotate(35)">
+        <polygon points="0,-48 6,0 0,10 -6,0" fill="#c94a4a"/>
+        <polygon points="0,48 6,0 0,-10 -6,0" fill="#3a6288"/>
+      </g>
+      <circle r="6" fill="#5a3e1f"/>
+      <circle r="2.5" fill="#f5f0e0"/>
+    </g>
+    <circle cx="450" cy="105" r="95" fill="none" stroke="#cfe2f5" stroke-width="0.8" opacity="0.6"/>
+  </svg>
+</div>
+
+<header>
+  <h1 data-i18n="gl_h1">المصطلحات البحرية</h1>
+  <p class="subtitle" data-i18n="gl_subtitle">قاموس عربي / إنجليزي / صيني شامل</p>
+</header>
+
+<div class="container">
+  <div class="search-box">
+    <input type="text" id="search" placeholder="ابحث عن مصطلح بالعربي أو الإنجليزي...">
+  </div>
+  <div id="content"></div>
+</div>
+
+<footer>
+  دليل البحر والقوارب
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="21"/><line x1="7" y1="12" x2="17" y2="12"/><path d="M4 15c0 4.5 3.5 6.5 8 6.5s8-2 8-6.5"/></svg>
+</footer>
+
+<script>
+window.sections = [
+  { title: "أنواع السفن والقوارب", items: [
+    ["Ship","سفينة","船"],["Boat","قارب","小船"],["Yacht","يخت","游艇"],
+    ["Sailboat","قارب شراعي","帆船"],["Speedboat","قارب سريع","快艇"],
+    ["Fishing boat","قارب صيد","渔船"],["Cargo ship","سفينة شحن","货船"],
+    ["Container ship","سفينة حاويات","集装箱船"],["Tanker","ناقلة","油轮"],
+    ["Cruise ship","سفينة سياحية","游轮"],["Ferry","عبّارة","渡轮"],
+    ["Submarine","غواصة","潜艇"],["Warship","سفينة حربية","军舰"],
+    ["Destroyer","مدمّرة","驱逐舰"],["Frigate","فرقاطة","护卫舰"],
+    ["Aircraft carrier","حاملة طائرات","航空母舰"],["Tugboat","قاطرة","拖船"],
+    ["Barge","بارجة","驳船"],["Canoe","كانو","独木舟"],["Kayak","كاياك","皮划艇"],
+    ["Raft","طوف","木筏"],["Catamaran","قارب ببدنين","双体船"],
+    ["Trimaran","قارب بثلاثة أبدان","三体船"],["Dinghy","قارب صغير","小艇"],
+    ["Lifeboat","قارب نجاة","救生艇"],["Patrol boat","قارب دورية","巡逻艇"],
+    ["Pirate ship","سفينة قراصنة","海盗船"],["Galleon","سفينة شراعية كبيرة","大帆船"],
+    ["Schooner","سفينة شراعية","纵帆船"],["Sloop","قارب شراعي بشراع واحد","单桅帆船"]
+  ]},
+  { title: "أجزاء السفينة", items: [
+    ["Hull","بدن السفينة","船体"],["Bow","مقدمة السفينة","船首"],
+    ["Stern","مؤخرة السفينة","船尾"],["Port","الجانب الأيسر","左舷"],
+    ["Starboard","الجانب الأيمن","右舷"],["Deck","سطح السفينة","甲板"],
+    ["Bridge","غرفة القيادة","驾驶台"],["Cabin","كابينة","船舱"],
+    ["Cockpit","قمرة القيادة","驾驶舱"],["Mast","صارية","桅杆"],["Sail","شراع","帆"],
+    ["Keel","عارضة","龙骨"],["Rudder","دفة","舵"],["Propeller","مروحة","螺旋桨"],
+    ["Anchor","مرساة","锚"],["Helm","دفة القيادة","舵轮"],["Wheel","عجلة القيادة","方向盘"],
+    ["Funnel","مدخنة","烟囱"],["Hatch","فتحة","舱口"],["Hold","عنبر الشحن","货舱"],
+    ["Bilge","قاع السفينة الداخلي","舱底"],["Bowsprit","سارية المقدمة","船首斜桅"],
+    ["Gunwale","حافة القارب","舷缘"],["Transom","مؤخرة مسطحة","艉板"],
+    ["Cleat","مربط الحبال","系缆桩"],["Fender","واقي الصدمات","护舷"],
+    ["Gangway","ممشى الصعود","舷梯"],["Porthole","نافذة دائرية","舷窗"]
+  ]},
+  { title: "المعدات والأدوات", items: [
+    ["Life jacket","سترة نجاة","救生衣"],["Life raft","طوف نجاة","救生筏"],
+    ["Lifebuoy","عوّامة نجاة","救生圈"],["Compass","بوصلة","指南针"],
+    ["GPS","نظام تحديد المواقع","全球定位系统"],["Radar","رادار","雷达"],
+    ["Sonar","سونار","声纳"],["Radio","لاسلكي","无线电"],["Binoculars","منظار","望远镜"],
+    ["Chart","خريطة بحرية","海图"],["Log","سجل الرحلة","航行日志"],["Rope","حبل","绳索"],
+    ["Chain","سلسلة","链条"],["Winch","ونش","绞盘"],["Pulley","بكرة","滑轮"],
+    ["Oar","مجداف","桨"],["Paddle","مجداف كاياك","短桨"],["Rowing","تجديف","划船"],
+    ["Bailer","مغرفة تفريغ الماء","舀水器"],["Boat hook","خطاف القارب","撑杆"]
+  ]},
+  { title: "المصطلحات البحرية والملاحية", items: [
+    ["Navigation","ملاحة","导航"],["Seamanship","فنون البحر","航海术"],
+    ["Mooring","رسو","系泊"],["Docking","رسو في الرصيف","靠泊"],
+    ["Anchoring","إرساء","抛锚"],["Berth","مرسى","泊位"],["Harbor","ميناء","港口"],
+    ["Port","ميناء","港口"],["Dock","رصيف","码头"],["Pier","رصيف بحري","栈桥"],
+    ["Jetty","حاجز أمواج","防波堤"],["Wharf","رصيف الشحن","码头"],["Quay","رصيف الميناء","码头"],
+    ["Lighthouse","منارة","灯塔"],["Buoy","عوّامة إرشادية","浮标"],["Beacon","علامة ملاحية","信标"],
+    ["Tide","مد وجزر","潮汐"],["Current","تيار","水流"],["Wave","موجة","波浪"],
+    ["Wake","أثر السفينة","尾流"],["Knot","عقدة (سرعة)","节"],["Nautical mile","ميل بحري","海里"],
+    ["Latitude","خط العرض","纬度"],["Longitude","خط الطول","经度"],["Heading","اتجاه السير","航向"],
+    ["Bearing","الاتجاه","方位"],["Course","المسار","航线"],["Drift","انحراف","漂移"],
+    ["Lee","الجانب المحمي من الريح","背风面"],["Windward","الجانب المواجه للريح","迎风面"],
+    ["Aft","خلفي","船尾"],["Fore","أمامي","船首"],["Amidships","وسط السفينة","船中"],
+    ["Draft","غاطس السفينة","吃水"],["Displacement","إزاحة","排水量"],["Tonnage","الحمولة","吨位"],
+    ["Ballast","ثقل التوازن","压舱物"]
+  ]},
+  { title: "الطاقم والوظائف", items: [
+    ["Captain","قبطان","船长"],["Skipper","ربان","艇长"],["First mate","ضابط أول","大副"],
+    ["Crew","طاقم","船员"],["Sailor","بحار","水手"],["Seaman","بحّار","海员"],
+    ["Helmsman","قائد الدفة","舵手"],["Navigator","ملاح","领航员"],["Engineer","مهندس","工程师"],
+    ["Deckhand","عامل سطح","甲板工"],["Bosun","رئيس البحارة","水手长"],["Pilot","مرشد بحري","引航员"],
+    ["Admiral","أميرال","海军上将"],["Commodore","عميد بحري","海军准将"],["Marine","جندي بحري","海军陆战队员"]
+  ]},
+  { title: "أفعال ومصطلحات التشغيل", items: [
+    ["To sail","يبحر","航行"],["To anchor","يرسو","抛锚"],["To moor","يربط","系泊"],
+    ["To dock","يرسو في الرصيف","靠泊"],["To launch","ينزل الماء","下水"],
+    ["To embark","يصعد","登船"],["To disembark","ينزل","下船"],["To steer","يوجّه","掌舵"],
+    ["To navigate","يلاح","导航"],["To row","يجدّف","划船"],["To paddle","يجدّف","划桨"],
+    ["To cast off","يفك الحبال","解缆"],["To weigh anchor","يرفع المرساة","起锚"],
+    ["To capsize","ينقلب","倾覆"],["To run aground","يجنح","搁浅"],["To sink","يغرق","沉没"],
+    ["To float","يطفو","漂浮"],["To tow","يقطر","拖曳"]
+  ]},
+  { title: "مصطلحات بحرية إضافية", items: [
+    ["Ahoy","تحية بحرية","喂"],["Aye aye","أمرك سيدي","是"],["Avast","توقف","停"],
+    ["Belay","اربط","栓住"],["Crow's nest","عش الغراب","桅杆瞭望台"],["Figurehead","تمثال المقدمة","船首像"],
+    ["Flagship","السفينة الرئيسية","旗舰"],["Fleet","أسطول","舰队"],["Convoy","قافلة سفن","护航队"],
+    ["Armada","أسطول حربي","无敌舰队"],["Flotilla","أسطول صغير","小舰队"],["Marina","مرسى القوارب","码头"],
+    ["Dry dock","حوض جاف","干船坞"],["Shipyard","حوض بناء السفن","船厂"],["Shipwreck","حطم سفينة","沉船"],
+    ["Salvage","إنقاذ / انتشال","打捞"],["Ghost ship","سفينة أشباح","幽灵船"],
+    ["Maiden voyage","الرحلة الأولى","首航"],["Sea trial","تجربة بحرية","海试"]
+  ]}
+];
+</script>
+
+<script src="lang.js"></script>
+
+<script>
+/* عرض احتياطي: يعرض الجدول حتى لو لم يعمل lang.js */
+setTimeout(function() {
+  var container = document.getElementById('content');
+  if (!container) return;
+  if (container.innerHTML.trim() !== '') return;
+  if (typeof window.sections === 'undefined') return;
+
+  var rows = '';
+  window.sections.forEach(function(sec) {
+    sec.items.forEach(function(it) {
+      rows += '<tr>' +
+        '<td class="en">' + it[0] + '</td>' +
+        '<td class="ar">' + it[1] + '</td>' +
+        '<td class="zh" style="font-family:system-ui,sans-serif;">' + it[2] + '</td>' +
+        '<td class="cat" style="color:#6f95bd;font-size:0.82rem;font-style:italic;">' + sec.title + '</td>' +
+      '</tr>';
+    });
+  });
+
+  var html = '<div class="table-wrap"><table>' +
+    '<thead><tr>' +
+      '<th>الإنجليزي</th><th>العربي</th><th>الصيني</th><th>القسم</th>' +
+    '</tr></thead>' +
+    '<tbody>' + rows + '</tbody>' +
+  '</table></div>';
+
+  container.innerHTML = html;
+}, 500);
+</script>
+
+</body>
+</html>
