@@ -4,7 +4,7 @@
 
 [زيارة الموقع المباشر](https://weadalamari.github.io/ships-guid/index.html)
 
-![معاينة الموقع](preview.png)
+![معاينة الموقع](IMG_0358.jpeg)
 
 ---
 
