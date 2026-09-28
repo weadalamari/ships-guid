@@ -2,7 +2,7 @@
 
 موقع تفاعلي عن عالم القوارب والإبحار — مبني بالكامل من الصفر بـ HTML و CSS و JavaScript.
 
-[زيارة الموقع المباشر](https://weadalamari.github.io/اسم-المستودع/)
+[زيارة الموقع المباشر](https://weadalamari.github.io/ships-guid/index.html)
 
 ![معاينة الموقع](preview.png)
 
@@ -46,7 +46,7 @@
 
 ود العماري
 
-[GitHub](https://github.com/weadalamari) — [LinkedIn](https://www.linkedin.com/in/weadalamari)
+[GitHub](https://github.com/weadalamari)
 
 ---
 
